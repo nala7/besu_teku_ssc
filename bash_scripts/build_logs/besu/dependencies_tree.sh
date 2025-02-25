@@ -12,14 +12,14 @@ alias gradle-all-deps='gradle -q dependencies $(gradle -q projects \
 #VERSION["21.1.0]"="97ef557"
 
 
-## Version 25.1.0
-#cd ../../../nodes_src/besu
-#git checkout 870f3b7
-#sdk use java 21.0.6-tem
-#sdk use gradle 8.12.1
-#gradle-all-deps > besu-25.1.0_dependencies_tree.txt
-#mv besu-25.1.0_dependencies_tree.txt ../../bash_scripts/build_logs/besu
-#cd ../../bash_scripts/build_logs/besu
+# Version 25.1.0
+cd ../../../nodes_src/besu
+git checkout 870f3b7
+sdk use java 21.0.6-tem
+sdk use gradle 8.12.1
+gradle-all-deps > besu-25.1.0_dependencies_tree.txt
+mv besu-25.1.0_dependencies_tree.txt ../../bash_scripts/build_logs/besu
+cd ../../bash_scripts/build_logs/besu
 
 # Version 24.1.0
 #cd ../../../nodes_src/besu
