@@ -1,13 +1,13 @@
 #!/bin/bash
 
-echo "Extracting number of commits..."
+echo "Extracting number of commits..." > teku_commits_summary.txt
 
-cd ../../bash_scripts/build_logs/teku
-echo "teku-25.1.0: $(git -C ../../../nodes_src/teku-25.1.0 rev-list --count d56ce97) commits" > teku-25.1.0_commits_summary.txt
+versions=("teku-25.1.0" "teku-24.1.0" "teku-23.1.0" "teku-22.1.0")
 
+commit_hashes=("d56ce97" "82435a7" "8f1ef50" "5b85ef1" )
 
-cd ../../bash_scripts/build_logs/teku
-echo "teku-22.1.0: $(git -C ../../../nodes_src/teku-22.1.0 rev-list --count 5b85ef1) commits" > teku-25.1.0_commits_summary.txt
+for i in "${!versions[@]}"; do
+    echo "${versions[$i]}: $(git -C ../../../nodes_src/teku rev-list --count "${commit_hashes[$i]}") commits" >> teku_commits_summary.txt
+done
 
-cd ../../bash_scripts/build_logs/teku
-echo "teku-21.1.0: $(git -C ../../../nodes_src/teku-21.1.0 rev-list --count dcfb0eb) commits" > teku-25.1.0_commits_summary.txt
+cat teku_commits_summary.txt
