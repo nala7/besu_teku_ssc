@@ -1,6 +1,9 @@
 # Ethereum Software Supply Chain
 Analysis of the Software Supply Chain of Besu and Teku
 
+![Besu Teku Bigger](https://github.com/user-attachments/assets/d3b5735c-b2c8-4b20-a333-ce613662b789)
+###### Repo with visualization of groups: https://github.com/nala7/ssc-poster
+
 This repository contains the scripts and data of an analysis of the software supply chain of 
 the Ethereum nodes Besu and Teku.
 
